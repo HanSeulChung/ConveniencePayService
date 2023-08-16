@@ -6,7 +6,7 @@ import com.example.convpay.type.*;
 public class ConveniencePayService { // 편결이
     private final MoneyAdapter moneyAdapter = new MoneyAdapter();
     private final CardAdapter cardAdapter = new CardAdapter();
-
+    private final DiscountInterface discountInterface = new DiscountByConvenience();
     public PayResponse pay(PayRequest payRequest) {
         PaymentInterface paymentInterface;
 
@@ -16,13 +16,15 @@ public class ConveniencePayService { // 편결이
             paymentInterface = moneyAdapter;
         }
 
-        PaymentResult payment = paymentInterface.payment(payRequest.getPayAmount());
+        Integer discountedAmount = discountInterface.getDiscountedAmount(payRequest);
+        PaymentResult payment = paymentInterface.payment(discountedAmount);
+        
 
         if (payment == PaymentResult.PAYMENT_FAIL) {
             return new PayResponse(PayResult.FAIL, 0);
         }
         // Success Case (성공일 때는 마지막까지 내려올 수 있도록)
-        return new PayResponse(PayResult.SUCCESS, payRequest.getPayAmount());
+        return new PayResponse(PayResult.SUCCESS, discountedAmount);
 
     }
 
