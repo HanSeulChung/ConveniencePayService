@@ -24,7 +24,7 @@ public class PayCancelResponse {
         return payCancelResult;
     }
 
-    public void setPayCancleResult(PayCancelResult payCancelResult) {
+    public void setPayCancelResult(PayCancelResult payCancelResult) {
         this.payCancelResult = payCancelResult;
     }
 

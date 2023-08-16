@@ -9,12 +9,12 @@ public class PayCancelRequest {
     // 편의점 종류
     ConvenienceType convenienceType;
     // 결제 취소 금액
-    Integer payCancleAmount;
+    Integer payCancelAmount;
 
     public PayCancelRequest(PayMethodType payMethodType, ConvenienceType convenienceType, Integer payCancleAmount) {
         this.payMethodType = payMethodType;
         this.convenienceType = convenienceType;
-        this.payCancleAmount = payCancleAmount;
+        this.payCancelAmount = payCancleAmount;
     }
 
     public PayMethodType getPayMethodType() {
@@ -33,11 +33,11 @@ public class PayCancelRequest {
         this.convenienceType = convenienceType;
     }
 
-    public Integer getPayCancleAmount() {
-        return payCancleAmount;
+    public Integer getPayCancelAmount() {
+        return payCancelAmount;
     }
 
-    public void setPayCancleAmount(Integer payCancleAmount) {
-        this.payCancleAmount = payCancleAmount;
+    public void setPayCancelAmount(Integer payCancelAmount) {
+        this.payCancelAmount = payCancelAmount;
     }
 }
