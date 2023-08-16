@@ -3,21 +3,29 @@ package com.example.convpay.dto;
 import com.example.convpay.type.PayCancelResult;
 
 public class PayCancelResponse {
-    PayCancelResult payCancleResult;
+    PayCancelResult payCancelResult;
 
     Integer payCanceledAmount;
 
-    public PayCancelResponse(PayCancelResult payCancleResult, Integer payCanceledAmount) {
-        this.payCancleResult = payCancleResult;
+    @Override
+    public String toString() {
+        return "PayCancelResponse{" +
+                "payCancleResult=" + payCancelResult +
+                ", payCanceledAmount=" + payCanceledAmount +
+                '}';
+    }
+
+    public PayCancelResponse(PayCancelResult payCancelResult, Integer payCanceledAmount) {
+        this.payCancelResult = payCancelResult;
         this.payCanceledAmount = payCanceledAmount;
     }
 
-    public PayCancelResult getPayCancleResult() {
-        return payCancleResult;
+    public PayCancelResult getPayCancelResult() {
+        return payCancelResult;
     }
 
-    public void setPayCancleResult(PayCancelResult payCancleResult) {
-        this.payCancleResult = payCancleResult;
+    public void setPayCancleResult(PayCancelResult payCancelResult) {
+        this.payCancelResult = payCancelResult;
     }
 
     public Integer getPayCanceledAmount() {
