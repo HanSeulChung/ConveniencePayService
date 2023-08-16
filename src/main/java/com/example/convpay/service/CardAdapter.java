@@ -1,9 +1,6 @@
 package com.example.convpay.service;
 
-import com.example.convpay.type.CancelPaymentResult;
-import com.example.convpay.type.CardUseCancelResult;
-import com.example.convpay.type.CardUseResult;
-import com.example.convpay.type.PaymentResult;
+import com.example.convpay.type.*;
 
 public class CardAdapter implements PaymentInterface {
     // 1. 인증
@@ -30,6 +27,11 @@ public class CardAdapter implements PaymentInterface {
             return CardUseCancelResult.USE_CANCEL_FAIL; // 실패
         }
         return CardUseCancelResult.USE_CANCEL_SUCCESS; // 성공
+    }
+
+    @Override
+    public PayMethodType getpayMehtodType() {
+        return PayMethodType.CARD;
     }
 
     @Override

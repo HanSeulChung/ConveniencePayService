@@ -1,9 +1,6 @@
 package com.example.convpay.service;
 
-import com.example.convpay.type.CancelPaymentResult;
-import com.example.convpay.type.MoneyUseCancelResult;
-import com.example.convpay.type.MoneyUseResult;
-import com.example.convpay.type.PaymentResult;
+import com.example.convpay.type.*;
 
 public class MoneyAdapter implements PaymentInterface {
     public MoneyUseResult use(Integer payAmount) {
@@ -22,6 +19,11 @@ public class MoneyAdapter implements PaymentInterface {
             return MoneyUseCancelResult.MONEY_USE_CANCLE_FAIL;
         }
         return MoneyUseCancelResult.MONEY_USE_CANCLE_SUCCESS;
+    }
+
+    @Override
+    public PayMethodType getpayMehtodType() {
+        return PayMethodType.MONEY;
     }
 
     @Override
