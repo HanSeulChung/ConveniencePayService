@@ -1,22 +1,22 @@
 package com.example.convpay.dto;
 
-import com.example.convpay.type.PayCancleResult;
+import com.example.convpay.type.PayCancelResult;
 
 public class PayCancelResponse {
-    PayCancleResult payCancleResult;
+    PayCancelResult payCancleResult;
 
     Integer payCanceledAmount;
 
-    public PayCancelResponse(PayCancleResult payCancleResult, Integer payCanceledAmount) {
+    public PayCancelResponse(PayCancelResult payCancleResult, Integer payCanceledAmount) {
         this.payCancleResult = payCancleResult;
         this.payCanceledAmount = payCanceledAmount;
     }
 
-    public PayCancleResult getPayCancleResult() {
+    public PayCancelResult getPayCancleResult() {
         return payCancleResult;
     }
 
-    public void setPayCancleResult(PayCancleResult payCancleResult) {
+    public void setPayCancleResult(PayCancelResult payCancleResult) {
         this.payCancleResult = payCancleResult;
     }
 

@@ -5,7 +5,7 @@ import com.example.convpay.dto.PayCancelResponse;
 import com.example.convpay.type.ConvenienceType;
 import com.example.convpay.dto.PayRequest;
 import com.example.convpay.dto.PayResponse;
-import com.example.convpay.type.PayCancleResult;
+import com.example.convpay.type.PayCancelResult;
 import com.example.convpay.type.PayResult;
 import org.junit.jupiter.api.Test;
 
@@ -40,7 +40,7 @@ class ConveniencePayServiceTest {
         //when
         PayCancelResponse payCancelResponse = conveniencePayService.payCancle(payCancelRequest);
         //then
-        assertEquals(PayCancleResult.PAY_CANCEL_SUCCESS, payCancelResponse.getPayCancleResult());
+        assertEquals(PayCancelResult.PAY_CANCEL_SUCCESS, payCancelResponse.getPayCancleResult());
         assertEquals(1010, payCancelResponse.getPayCanceledAmount());
     }
     @Test
@@ -50,7 +50,7 @@ class ConveniencePayServiceTest {
         //when
         PayCancelResponse payCancelResponse = conveniencePayService.payCancle(payCancelRequest);
         //then
-        assertEquals(PayCancleResult.PAY_CANCEL_FAIL, payCancelResponse.getPayCancleResult());
+        assertEquals(PayCancelResult.PAY_CANCEL_FAIL, payCancelResponse.getPayCancleResult());
         assertEquals(0, payCancelResponse.getPayCanceledAmount());
     }
 

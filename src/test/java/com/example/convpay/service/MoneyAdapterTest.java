@@ -1,6 +1,6 @@
 package com.example.convpay.service;
 
-import com.example.convpay.type.MoneyUseCancleResult;
+import com.example.convpay.type.MoneyUseCancelResult;
 import com.example.convpay.type.MoneyUseResult;
 import org.junit.jupiter.api.Test;
 
@@ -34,9 +34,9 @@ class MoneyAdapterTest {
         //given
         Integer payAmount = 101;
         //when
-        MoneyUseCancleResult moneyUseCancleResult = moneyAdapter.useCancle(payAmount);
+        MoneyUseCancelResult moneyUseCancleResult = moneyAdapter.useCancle(payAmount);
         //then
-        assertEquals(MoneyUseCancleResult.MONEY_USE_CANCLE_SUCCESS, moneyUseCancleResult);
+        assertEquals(MoneyUseCancelResult.MONEY_USE_CANCLE_SUCCESS, moneyUseCancleResult);
     }
 
     @Test
@@ -44,9 +44,9 @@ class MoneyAdapterTest {
         //given
         Integer payAmount = 99;
         //when
-        MoneyUseCancleResult moneyUseCancleResult = moneyAdapter.useCancle(payAmount);
+        MoneyUseCancelResult moneyUseCancleResult = moneyAdapter.useCancle(payAmount);
         //then
-        assertEquals(MoneyUseCancleResult.MONEY_USE_CANCLE_FAIL, moneyUseCancleResult);
+        assertEquals(MoneyUseCancelResult.MONEY_USE_CANCLE_FAIL, moneyUseCancleResult);
     }
 
 }
