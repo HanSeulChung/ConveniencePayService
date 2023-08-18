@@ -7,7 +7,7 @@
 ## <프로젝트 생성>
 * Windows
 * IDE: IntelliJ Ultimate 
-* Language : Java(jdk 11)
+* Language : Java(jdk 17)
 * Project : Gradle Project
 * Spring Boot : 2.6.4
 * 프로젝트 생성 : start.spring.io
